@@ -2,6 +2,9 @@ function bubbleSort(array){
   if(array.length < 2){
     return array;
   }
+  if(!Array.isArray(array)){
+    return 'Please enter an array';
+  }
   var done = false;
   while (done === false){
     done = true;
@@ -17,3 +20,5 @@ function bubbleSort(array){
 
 console.log(bubbleSort([4,3,6,8,23,5,7,32]))
 console.log(bubbleSort([4]))
+console.log(bubbleSort('text'))
+console.log(bubbleSort({'hello': 'world'}))
